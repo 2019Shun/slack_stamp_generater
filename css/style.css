@@ -1,0 +1,50 @@
+.title {
+	margin-top: 2%;
+	margin-bottom: 3%;
+}
+
+.margin-3 {
+	margin-top: 3%;
+	margin-bottom: 3%;
+}
+
+.margin-6 {
+	margin-top: 6%;
+	margin-bottom: 6%;
+}
+
+.parent {
+	align-items: center;
+	padding: 20px 20px;
+	font-size: 20px;
+}
+
+.parent2 {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 20px 20px;
+	font-size: 20px;
+}
+
+.dl-padding {
+	align-items: center;
+	padding: 40px 40px 40px 40px;
+	font-size: 20px;
+}
+
+.display-flex {
+	padding: 20% 10%;
+}
+
+#stamp{
+	width:256px;
+	height:256px;
+}
+
+body {
+	padding: 2rem 1.5rem;
+	color: #333;
+	font-family: "M PLUS Rounded 1c", sans-serif;
+	line-height: 1.8;
+}

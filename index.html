@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="ja">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="colorpickersliders/dist/bootstrap.colorpickersliders.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tinycolor/1.4.1/tinycolor.min.js"></script>
+    <script src="colorpickersliders/dist/bootstrap.colorpickersliders.min.js"></script>
+    <script src="js/md-color-picker.js"></script>
+
+    <title>S3G</title>
+</head>
+
+<body>
+    <h1 class="display-1 text-center title">Simple Slack Stamp Generater</h1>
+
+    <div class="container text-center margin-3">
+        <div class="row">
+            <div class="col-md-4 text-center">
+                <h3 class="text-center py-3 px-md-5">テキスト</h3>
+                <div class="parent">
+                    <div class="form-group">
+                        <input type="text" id="text1" class="form-control" placeholder="1行目">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" id="text2" class="form-control" placeholder="2行目">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" id="text3" class="form-control" placeholder="3行目">
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <h3 class="text-center py-3 px-md-5">フォント</h3>
+                <div class="parent">
+                    <div><input type="checkbox" class="checkbox" id="font_meiryo" value="'Meiryo'" checked><label for="pre">&ensp;メイリオ</label></div>
+                    <div><input type="checkbox" class="checkbox" id="font_Gothic" value="'Yu Gothic'"><label for="deferred">&ensp;ゴシック</label></div>
+                    <div><input type="checkbox" class="checkbox" id="font_mincho" value="'Yu Mincho'"><label for="deferred">&ensp;明朝</label></div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <h3 class="text-center py-3 px-md-5">フォントカラー</h3>
+                <div class="parent2">
+                    <div>
+                        <md-color-picker id="colorPicker" color-margin="6" colors-per-row="5" color-size="30" default-tint="500" fixedMinHeight="true" palette="material-full" use-spectrum-picker="true" value="#000000"></md-color-picker>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="container text-center margin-3">
+        <div class="row">
+            <div class="col-md-6 text-right">
+                <canvas id="stamp" width="500" height="500" class="border"></canvas>
+            </div>
+            <div class="col-md-6 text-left">
+                <div class="display-flex">
+                    <button type="button" id="download_btn" class="btn btn-primary">Download</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>
